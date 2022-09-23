@@ -1,0 +1,30 @@
+class Solution {
+    public String reverseWords(String s) {
+        char nstring;
+        String a="";
+        String rev="";
+        for(int i=0;i<s.length();i++)
+        {
+            nstring=s.charAt(i);
+            a=nstring+a;
+            
+        }
+        String std[]=a.split(" ");
+        for(int i=0;i<std.length;i++)
+        {
+            if(i==std.length - 1)
+            {
+                rev=std[i]+rev;
+            }
+            else
+            {
+                rev=" "+std[i]+rev;
+            }
+            //rev=std[i]+" "+rev;
+            
+            
+        }
+        return rev;
+        
+    }
+}
